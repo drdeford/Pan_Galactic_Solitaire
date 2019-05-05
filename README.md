@@ -24,7 +24,13 @@ In 1994, Peter Doyle and John Conway gave <a href="https://arxiv.org/pdf/math/06
  
  <h4> Game Rules </h4>
  
- As described above, the main gameplay area is a 4 x 13 grid of cards, shown in the figure below. The rows are each indexed by a suit - from bottom to top spades, hearts, diamonds, clubs. A card is in its home row if the suit of the card matches the index of the row. For example, the 2 of spades is in its home row in the example figure. The goal of the game is to have each column consist of all four of the cards of a single rank, with each of them in its corresponding home row. There are two ways to move cards around the grid in this version of PGS: 
+ As described above, the main gameplay area is a 4 x 13 grid of cards, shown in the figure below. The rows are each indexed by a suit - from bottom to top spades, hearts, diamonds, clubs. A card is in its home row if the suit of the card matches the index of the row. For example, the 2 of spades is in its home row in the example figure. The goal of the game is to have each column consist of all four of the cards of a single rank, with each of them in its corresponding home row.
+ 
+  
+  ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_1.png "The game window")
+  
+  
+  There are two ways to move cards around the grid in this version of PGS: 
  <ol>
  <li> <b>Swap: </b> If a card A is in its home row and there is another card B in its same column that has the same suit as A then B can be exchanged in the grid with the card C that is uniquely specified by the rank of A and the suit of the row that B currently occupies. To perform this move in the game, click on card B (the one that isn't in its home row). The figures below show some examples. In the first figure, notice that in the leftmost column the 9 of hearts is in its home row so we can use it as card A. In that same column we have the 3 of hearts (card B) which we can exchange for the 9 of clubs (card C), since the 3 is in the club row. Performing this change now allows us to use the 9 of clubs (card A) to exchange the 6 of clubs (card B) for the 9 of diamonds (card C). Next, we can complete the column of 9s using the 9 of diamonds (card A) to swap the 8 of diamonds (card B) for the 9 of spades (card C).
  
@@ -43,9 +49,7 @@ In 1994, Peter Doyle and John Conway gave <a href="https://arxiv.org/pdf/math/06
    ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_7.png "Cycle 3s")
 </li>
  </ol>
- 
-  ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_1.png "The game window")
-  
+
   <h4> Interface </h4>
   The bottom of the game window has some information about the current game and buttons for highlighting permissible moves and interacting with the game state. The moves counter shows how many swap and cycle steps you have performed in this game. There are several interesting questions about the average number of steps it takes for a game to end or the minimal number of steps needed to win. The shuffle and redeal buttons restart the game with a new card layout and the help, options, and quit buttons are hopefully self-explanatory. 
   
