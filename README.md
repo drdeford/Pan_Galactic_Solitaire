@@ -19,12 +19,12 @@ In 1994, Peter Doyle and John Conway gave <a href="https://arxiv.org/pdf/math/06
  <h4> Starting the game </h4>
  The source folder contains two zip directories - a Windows executable version and the Python Source. To run either, simply download the corresponding .zip file and extract the contents. For the Windows version, double clicking "easypgs.py" will start the game. The Python source includes versions for both Python 2 and Python 3, as well as some more difficult rule sets. In either case, you can start the game by typing python easypgs.py in your favorite terminal. Then, click the "Start Game" button to get playing.
  
- ![alt text](https://github.com/.png "The opening window!")
+ ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_Intro.png "The opening window!")
  <h4> Game Rules </h4>
  
  As described above, the main gameplay area is a 4 x 13 grid of cards, shown in the figure below. 
  
-  ![alt text](https://github.com/.png "The game window!")
+  ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_1.png "The game window!")
   
   
 <h4> Easy?PGS</h4>
