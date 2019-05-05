@@ -17,15 +17,32 @@ In 1994, Peter Doyle and John Conway gave <a href="https://arxiv.org/pdf/math/06
  <h2> Playing EasyPGS</h2>
  This section describes how to play the easyPGS variant provided here. 
  <h4> Starting the game </h4>
- The source folder contains two zip directories - a Windows executable version and the Python Source. To run either, simply download the corresponding .zip file and extract the contents. For the Windows version, double clicking "easypgs.py" will start the game. The Python source includes versions for both Python 2 and Python 3, as well as some more difficult rule sets. In either case, you can start the game by typing python easypgs.py in your favorite terminal. Then, click the "Start Game" button to get playing.
+ The source folder contains two zip directories - a Windows executable version and the Python Source. To run either, simply download the corresponding .zip file and extract the contents. For the Windows version, double clicking "easypgs.py" will start the game. The Python source includes versions for both Python 2 and Python 3, as well as some more difficult rule sets. In either case, you can start the game by typing python easypgs.py in your favorite terminal. Then, click the "Play Game" button to get playing.
  
  ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_Intro.png "The opening window!")
  <h4> Game Rules </h4>
  
- As described above, the main gameplay area is a 4 x 13 grid of cards, shown in the figure below. 
+ As described above, the main gameplay area is a 4 x 13 grid of cards, shown in the figure below. The rows are each indexed by a suit - from bottom to top spades, hearts, diamonds, clubs. A card is in its home row if the suit of the card matches the index of the row. For example, the 2 of spades is in its home row in the example figure.  There are two ways to move cards around the grid in this version of PGS: 
+ <ol>
+ <li> <b>Swap: </b> </li>
+ <li> <b>Cycle: </b></li>
+ </ol>
  
-  ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_1.png "The game window!")
+  ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_1.png "The game window")
   
+  <h4> Interface </h4>
+  The bottom of the game window has some information about the current game and buttons for highlighting permissible moves and interacting with the game state. The moves counter shows how many swap and cycle steps you have performed in this game. There are several interesting questions about the average number of steps it takes for a game to end or the minimal number of steps needed to win. The shuffle and redeal buttons restart the game with a new card layout and the help, options, and quit buttons are hopefully self-explanatory. 
+  
+  The top row of buttons gives highlights pairs of cards which can be swapped with backgrounds of the same color. The None button turns off all suggestions, the All button shows all possible swaps, and the buttons labelled with a suit show the moves that correspond to a card in that suits home row. The figure below shows a board with this highlighting for the spade moves, since it is possible to swap the 9 of spades for the 7 of diamonds, since the 7 of spades is in the top row directly above the 9 and similarly it is possible to swap the 2 of spades for the ace of diamonds, since the ace of spades is in the top row directly above the 2. 
+  
+  ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_2.png "Permissible spade moves")
+
+  The full set of permissible moves can look a little overwhelming when viewed all at once. Additionally, it is possible for a single card to be allowed to swap with multiple partners, in which case, just a single color pair is displayed. 
+  ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_3.png "Permissible spade moves")
+
+
+  <h4>End of the game </h4>
+  Once all of the cards in a row have the same rank and are in the proper row that column is turned face down, as the cards may no longer move. You win if all of the cards are eventually turned face down. You lose if you reach a state with no possible moves. 
   
 <h4> Easy?PGS</h4>
 Most games of easyPGS are unwinnable, at least as far as we can tell with Monte Carlo simulations, which seems to belie the "easy" moniker. The reason this version is called easyPGS is that the original rules did not allow you to make the moves of type 2 described in the previous section. This led to many more unwinnable games and a much less satisfactory playing experience (from my perspective). PGS purists, who despair at the attention spans of millenials like myself, can play with the original rule set in the python source directory.  
