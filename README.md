@@ -2,6 +2,9 @@
 
 This repository contains working implmentations of Pan Galactic Solitaire (PGS), motivated by Peter Doyle's work on set-theoretic division. 
 
+ ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_Intro.png "The opening window!")
+
+
 
 <h2> Mathematical Background </h2>
 In 1994, Peter Doyle and John Conway gave <a href="https://arxiv.org/pdf/math/0605779.pdf">a proof<a/> that you do not need the axiom of choice in order to divide by three - in the setting of set theory. That is, given two sets A and B together with a bijection between 3 x A and 3 X B construct a bijection between A and B without choice. This line of work is similar in flavor to the directed graph proof of the Cantor-Scroder-Bernstein Theorem, that if there are injective maps from A to B and B to A then there must be a bijective map between them. The general case of division by n remained open until Peter Doyle and Cecil Qiu produced <a href="https://math.dartmouth.edu/~doyle/docs/four/four.pdf">this paper</a> in 2015 which solved the general case conclusively.  <a href="https://arxiv.org/pdf/1504.02179.pdf"> This paper</a> by Rich Schwartz contains a clean, expository proof of their main result (along with some whimsical pictures of chickens).  
@@ -19,13 +22,26 @@ In 1994, Peter Doyle and John Conway gave <a href="https://arxiv.org/pdf/math/06
  <h4> Starting the game </h4>
  The source folder contains two zip directories - a Windows executable version and the Python Source. To run either, simply download the corresponding .zip file and extract the contents. For the Windows version, double clicking "easypgs.py" will start the game. The Python source includes versions for both Python 2 and Python 3, as well as some more difficult rule sets. In either case, you can start the game by typing python easypgs.py in your favorite terminal. Then, click the "Play Game" button to get playing.
  
- ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_Intro.png "The opening window!")
  <h4> Game Rules </h4>
  
- As described above, the main gameplay area is a 4 x 13 grid of cards, shown in the figure below. The rows are each indexed by a suit - from bottom to top spades, hearts, diamonds, clubs. A card is in its home row if the suit of the card matches the index of the row. For example, the 2 of spades is in its home row in the example figure.  There are two ways to move cards around the grid in this version of PGS: 
+ As described above, the main gameplay area is a 4 x 13 grid of cards, shown in the figure below. The rows are each indexed by a suit - from bottom to top spades, hearts, diamonds, clubs. A card is in its home row if the suit of the card matches the index of the row. For example, the 2 of spades is in its home row in the example figure. The goal of the game is to have each column consist of all four of the cards of a single rank, with each of them in its corresponding home row. There are two ways to move cards around the grid in this version of PGS: 
  <ol>
- <li> <b>Swap: </b> </li>
- <li> <b>Cycle: </b></li>
+ <li> <b>Swap: </b> If a card A is in its home row and there is another card B in its same column that has the same suit as A then B can be exchanged in the grid with the card C that is uniquely specified by the rank of A and the suit of the row that B currently occupies. To perform this move in the game, click on card B (the one that isn't in its home row). The figures below show some examples. In the first figure, notice that in the leftmost column the 9 of hearts is in its home row so we can use it as card A. In that same column we have the 3 of hearts (card B) which we can exchange for the 9 of clubs (card C), since the 3 is in the club row. Performing this change now allows us to use the 9 of clubs (card A) to exchange the 6 of clubs (card B) for the 9 of diamonds (card C). Next, we can complete the column of 9s using the 9 of diamonds (card A) to swap the 8 of diamonds (card B) for the 9 of spades (card C).
+ 
+  ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_8.png "Swap 9s")
+  ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_9.png "Swap 9s")
+  ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_10.png "Swap 9s")
+  ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_11.png "Swap 9s")
+  
+  Although this move seems complicated, a little bit of practice is usually enough to get a feel for the right way to apply it. 
+</li>
+ <li> <b>Cycle: </b> You may perform a cycle move if at least three of the cards in a column share a rank. This move exchanges the card not in its home row with the appropriate card of the rank that matches the majority of the column. To perform this move in the game, click on the card that doesn't match the majority of the column.
+
+ The figure below shows an example in the 3s column where the cycle move can be applied twice in succession: first in the hearts row to swap the 3 of hearts for the nine of diamonds and then in the diamonds row to swap the 9 of diamonds for the three of diamonds, completing the column: 
+   ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_5.png "Cycle 3s")
+   ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_6.png "Cycle 3s")
+   ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_7.png "Cycle 3s")
+</li>
  </ol>
  
   ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_1.png "The game window")
@@ -37,12 +53,13 @@ In 1994, Peter Doyle and John Conway gave <a href="https://arxiv.org/pdf/math/06
   
   ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_2.png "Permissible spade moves")
 
-  The full set of permissible moves can look a little overwhelming when viewed all at once. Additionally, it is possible for a single card to be allowed to swap with multiple partners, in which case, just a single color pair is displayed. 
-  ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_3.png "Permissible spade moves")
+  The full set of permissible moves can look a little overwhelming when viewed all at once. Additionally, it is possible for a single card to be allowed to swap with multiple partners, in which case, just a single color pair is displayed. After each move, the game window resets to showing none of the hints. 
+  ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_3.png "Permissible all moves")
+  ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_lots.png "Permissible all moves")
 
 
   <h4>End of the game </h4>
-  Once all of the cards in a row have the same rank and are in the proper row that column is turned face down, as the cards may no longer move. You win if all of the cards are eventually turned face down. You lose if you reach a state with no possible moves. 
+  Once all of the cards in a row have the same rank and are in the proper row that column is turned face down, as the cards may no longer move. You win if all of the cards are eventually turned face down. You lose if you reach a state with no possible moves. Not all games are winnable (understatement). 
   
 <h4> Easy?PGS</h4>
 Most games of easyPGS are unwinnable, at least as far as we can tell with Monte Carlo simulations, which seems to belie the "easy" moniker. The reason this version is called easyPGS is that the original rules did not allow you to make the moves of type 2 described in the previous section. This led to many more unwinnable games and a much less satisfactory playing experience (from my perspective). PGS purists, who despair at the attention spans of millenials like myself, can play with the original rule set in the python source directory.  
