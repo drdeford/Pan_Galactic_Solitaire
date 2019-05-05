@@ -64,7 +64,7 @@ In 1994, Peter Doyle and John Conway gave <a href="https://arxiv.org/pdf/math/06
 
   <h4>End of the game </h4>
   Once all of the cards in a row have the same rank and are in the proper row that column is turned face down, as the cards may no longer move. You win if all of the cards are eventually turned face down. You lose if you reach a state with no possible moves. Not all games are winnable (understatement). An example of a lost game is below, since after 33 moves it is no longer possible to swap or cycle any cards.
-    ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_12.png "Lost game :(") 
+    ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_12.png "Lost game") 
 
   
 <h4> Easy?PGS</h4>
