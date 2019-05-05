@@ -63,8 +63,12 @@ In 1994, Peter Doyle and John Conway gave <a href="https://arxiv.org/pdf/math/06
 
 
   <h4>End of the game </h4>
-  Once all of the cards in a row have the same rank and are in the proper row that column is turned face down, as the cards may no longer move. You win if all of the cards are eventually turned face down. You lose if you reach a state with no possible moves. Not all games are winnable (understatement). 
+  Once all of the cards in a row have the same rank and are in the proper row that column is turned face down, as the cards may no longer move. You win if all of the cards are eventually turned face down. You lose if you reach a state with no possible moves. Not all games are winnable (understatement). An example of a lost game is below, since after 33 moves it is no longer possible to swap or cycle any cards.
+    ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_12.png "Lost game :(") 
+
   
 <h4> Easy?PGS</h4>
 Most games of easyPGS are unwinnable, at least as far as we can tell with Monte Carlo simulations, which seems to belie the "easy" moniker. The reason this version is called easyPGS is that the original rules did not allow you to make the moves of type 2 described in the previous section. This led to many more unwinnable games and a much less satisfactory playing experience (from my perspective). PGS purists, who despair at the attention spans of millenials like myself, can play with the original rule set in the python source directory.  
+
+
 
