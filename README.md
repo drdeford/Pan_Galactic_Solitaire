@@ -58,8 +58,8 @@ In 1994, Peter Doyle and John Conway gave <a href="https://arxiv.org/pdf/math/06
   ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_2.png "Permissible spade moves")
 
   The full set of permissible moves can look a little overwhelming when viewed all at once. Additionally, it is possible for a single card to be allowed to swap with multiple partners, in which case, just a single color pair is displayed. After each move, the game window resets to showing none of the hints. 
-  ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_3.png "Permissible all moves")
-  ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_lots.png "Permissible all moves")
+  ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_3.png "All permissible moves")
+  ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_lots.png "All permissible moves")
 
 
   <h4>End of the game </h4>
@@ -69,7 +69,7 @@ In 1994, Peter Doyle and John Conway gave <a href="https://arxiv.org/pdf/math/06
 
   
 <h4> Easy?PGS</h4>
-Most games of easyPGS are unwinnable, at least as far as we can tell with Monte Carlo simulations, which seems to belie the "easy" moniker. The reason this version is called easyPGS is that the original rules did not allow you to make the moves of type 2 described in the previous section. This led to many more unwinnable games and a much less satisfactory playing experience (from my perspective). PGS purists, who despair at the attention spans of millenials like myself, can play with the original rule set in the python source directory.  
+Most games of easyPGS are unwinnable, at least as far as we can tell with Monte Carlo simulations (with a variety of simple strategies for move selection), which seems to belie the "easy" moniker. The reason this version is called easyPGS is that the original rules did not allow you to make the moves of type 2 described in the previous section. This led to many more unwinnable games and a much less satisfactory playing experience (from my perspective). PGS purists, who despair at the attention spans of millenials like myself, can play with the original rule set in the python source directory.  
 
 
 
