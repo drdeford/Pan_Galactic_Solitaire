@@ -1,6 +1,5 @@
 # Pan Galactic Solitaire
-
-This repository contains working implmentations of Pan Galactic Solitaire (PGS), motivated by Peter Doyle's work on set-theoretic division. 
+Playable versions of Pan Galactic Solitaire (PGS), motivated by Peter Doyle's work on set-theoretic division. 
 
  ![alt text](https://github.com/drdeford/Pan_Galactic_Solitaire/blob/master/Figures/PGS_Intro.png "The opening window!")
 
